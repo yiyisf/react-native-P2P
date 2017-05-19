@@ -109,7 +109,7 @@ class User extends Component {
         return (
             <View style={{flex: 1, backgroundColor: '#f5f5f5'}}>
 
-                <View style={{height: 40, backgroundColor: '#389e7f', flexDirection: 'row', paddingTop: 10}}>
+                <View style={{height: 40, backgroundColor: '#389e7f', flexDirection: 'row', alignItems:'center'}}>
                     <View style={{flex: 1}}></View>
                     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                         <Text style={{fontSize: 18, color: 'white', alignSelf: 'center'}}>我的</Text>

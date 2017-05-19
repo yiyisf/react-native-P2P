@@ -11,9 +11,7 @@ import {
     InteractionManager
 } from 'react-native'
 import Message from './Message';
-import Login from './UserCenter/Login';
-import Setting from './UserCenter/Setting';
-import More from './UserCenter/More';
+import BorrowCash from "./BorrowCash";
 
 
 export default class Find extends Component {
@@ -30,8 +28,8 @@ export default class Find extends Component {
         const {navigator} = this.props;
         InteractionManager.runAfterInteractions(() => {
             navigator.push({
-                component: Setting,
-                name: 'Setting',
+                component: BorrowCash,
+                name: 'BorrowCash',
             });
         });
     }

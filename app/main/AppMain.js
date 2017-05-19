@@ -23,7 +23,7 @@ class AppMain extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'approve'
+            selectedTab: 'borrow'
         };
     }
 
