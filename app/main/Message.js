@@ -154,7 +154,6 @@ class Message extends Component {
                     </View>
                     <View style={{width: 40, height: 40}}/>
                 </View>
-
                 <View style={{flex:1}}>
                     <ListView
                         initialListSize={4}
