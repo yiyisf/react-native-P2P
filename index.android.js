@@ -9,4 +9,4 @@ import {
     AppRegistry,
 } from 'react-native';
 import rootApp from './app/root';
-AppRegistry.registerComponent('lanmaolicai', () => rootApp);
+AppRegistry.registerComponent('CashMobile', () => rootApp);

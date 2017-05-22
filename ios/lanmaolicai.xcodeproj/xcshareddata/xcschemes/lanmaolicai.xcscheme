@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "lanmaolicai.app"
-               BlueprintName = "lanmaolicai"
-               ReferencedContainer = "container:lanmaolicai.xcodeproj">
+               BuildableName = "CashMobile.app"
+               BlueprintName = "CashMobile"
+               ReferencedContainer = "container:CashMobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
                BuildableName = "lanmaolicaiTests.xctest"
                BlueprintName = "lanmaolicaiTests"
-               ReferencedContainer = "container:lanmaolicai.xcodeproj">
+               ReferencedContainer = "container:CashMobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
                BuildableName = "lanmaolicaiTests.xctest"
                BlueprintName = "lanmaolicaiTests"
-               ReferencedContainer = "container:lanmaolicai.xcodeproj">
+               ReferencedContainer = "container:CashMobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lanmaolicai.app"
-            BlueprintName = "lanmaolicai"
-            ReferencedContainer = "container:lanmaolicai.xcodeproj">
+            BuildableName = "CashMobile.app"
+            BlueprintName = "CashMobile"
+            ReferencedContainer = "container:CashMobile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lanmaolicai.app"
-            BlueprintName = "lanmaolicai"
-            ReferencedContainer = "container:lanmaolicai.xcodeproj">
+            BuildableName = "CashMobile.app"
+            BlueprintName = "CashMobile"
+            ReferencedContainer = "container:CashMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lanmaolicai.app"
-            BlueprintName = "lanmaolicai"
-            ReferencedContainer = "container:lanmaolicai.xcodeproj">
+            BuildableName = "CashMobile.app"
+            BlueprintName = "CashMobile"
+            ReferencedContainer = "container:CashMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

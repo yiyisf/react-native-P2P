@@ -1,4 +1,4 @@
-package com.lanmaolicai;
+package com.CashMobile;
 
 import android.app.Application;
 import android.util.Log;
