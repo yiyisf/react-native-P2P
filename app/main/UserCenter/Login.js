@@ -18,7 +18,8 @@ import {toastShort} from '../../common/ToastUtil';
 import ShortLineTwo from '../../component/ShortLineTwo';
 import Register from './Register';
 import ResetPwd from  './ResetPwd';
-
+import styles from '../../common/Style';
+import Loading from '../../component/Loading';
 
 class Login extends Component {
     constructor(props) {
@@ -88,11 +89,11 @@ class Login extends Component {
         console.log(dispatch);
         return (
             <View style={{backgroundColor: '#f5f5f5', flex: 1}}>
-                <View style={styles.topbar_bg}>
+                <View style={styles.header}>
                     <TouchableOpacity onPress={() => {
                         this.buttonBackAction()
                     }}
-                                      style={styles.topbar_left_item}>
+                                      style={styles.headerTitle}>
                         <Image
                             style={{width: 13, height: 20}}
                             source={require('../../imgs/ic_center_back.png')}
@@ -114,7 +115,7 @@ class Login extends Component {
                                style={{width: 17, height: 14, marginLeft: 13}}/>
                         <TextInput
                             style={{
-                                height: 30,
+                                height: 45,
                                 marginTop: 10,
                                 marginLeft: 5,
                                 fontSize: 15,
@@ -142,7 +143,7 @@ class Login extends Component {
                                style={{width: 17, height: 14, marginLeft: 13}}/>
                         <TextInput
                             style={{
-                                height: 30,
+                                height: 45,
                                 marginTop: 10,
                                 marginLeft: 5,
                                 fontSize: 15,
@@ -177,7 +178,7 @@ class Login extends Component {
                     <View style={{
                         width: 300,
                         height: 40,
-                        backgroundColor: '#3b3738',
+                        backgroundColor: '#389e7f',
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
@@ -214,49 +215,10 @@ class Login extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Loading ref={'loading'} text={'登录中...'}/>
+                <Loading ref={'loading'} text={'登录中...'} />
             </View>
         );
     }
 }
-const styles = StyleSheet.create({
-    item_layout: {
-        backgroundColor: 'white',
-        height: 48,
-        justifyContent: 'center'
-    },
-    topbar_bg: {
-        height: 40,
-        backgroundColor: '#3b3738',
-        flexDirection: 'row',
-        paddingTop: 10
-    },
-    topbar_left_item: {
-        width: 48,
-        height: 48,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    topbar_center_bg: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    topbar_center_tv: {
-        fontSize: 18,
-        color: 'white',
-        alignSelf: 'center'
-    },
-    topbar_right_item: {
-        width: 48,
-        height: 48,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    topbar_right_tv: {
-        fontSize: 15,
-        color: 'white',
-        alignSelf: 'center'
-    }
-});
+
 export default Login;

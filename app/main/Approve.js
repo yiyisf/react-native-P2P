@@ -9,10 +9,10 @@ import {
     Dimensions,
     Image,
     Text,
-    ToastAndroid,
 } from 'react-native'
 import {connect} from 'react-redux';
 import CenterItem from "../component/CenterItem";
+import {toastShort} from '../common/ToastUtil';
 
 /**
  * 认证模块
@@ -36,9 +36,9 @@ class Approve extends Component {
     itemActionIndex(position) {
         const {navigator} = this.props;
         if (position === 1) {
-            ToastAndroid.show("点击了身份认证", ToastAndroid.SHORT);
+            toastShort("点击了身份认证");
         } else if (position === 2) {
-            ToastAndroid.show("点击了个人信息", ToastAndroid.SHORT);
+            toastShort("点击了个人信息");
             // InteractionManager.runAfterInteractions(() => {
             //     navigator.push({
             //         component: Prepaid,
@@ -46,7 +46,7 @@ class Approve extends Component {
             //     });
             // });
         } else if (position === 3) {
-            ToastAndroid.show("点击了信用认证", ToastAndroid.SHORT);
+            toastShort("点击了信用认证");
             // InteractionManager.runAfterInteractions(() => {
             //     navigator.push({
             //         component: Withdraw,
@@ -54,7 +54,7 @@ class Approve extends Component {
             //     });
             // });
         } else if (position === 4) {
-            ToastAndroid.show("点击了手机认证", ToastAndroid.SHORT);
+            toastShort("点击了手机认证");
             // InteractionManager.runAfterInteractions(() => {
             //     navigator.push({
             //         component: Charge,

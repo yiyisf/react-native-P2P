@@ -10,6 +10,7 @@ import{
     Modal,
     Dimensions,
     TouchableWithoutFeedback,
+    Share,
 } from 'react-native';
 import { NaviGoBack } from '../../common/CommonUtils';
 import { toastShort } from '../../common/ToastUtil';

@@ -30,6 +30,12 @@ export default styles = StyleSheet.create({
             },
         }),
     },
+    headerTitle:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 30,
+        width: 30,
+    },
     circle: {
         height: 20,
         width: 20,
@@ -60,6 +66,27 @@ export default styles = StyleSheet.create({
         marginRight: 20,
         marginTop: 10,
         backgroundColor: 'white',
+    },
+    topbar_center_bg: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    topbar_right_item: {
+        width: 48,
+        height: 48,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    topbar_center_tv: {
+        fontSize: 18,
+        color: 'white',
+        alignSelf: 'center'
+    },
+    topbar_right_tv: {
+        fontSize: 15,
+        color: 'white',
+        alignSelf: 'center'
     },
     item_view_top: {
         flexDirection: 'row',

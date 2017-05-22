@@ -32,7 +32,15 @@ class Login extends Component {
       this.buttonBackAction=this.buttonBackAction.bind(this);    
       this.buttonChangeState=this.buttonChangeState.bind(this);
       this.registerAction=this.registerAction.bind(this);
-}
+  }
+    componentWillMount() {
+        BackAndroid.addEventListener('hardwareBackPress', this.buttonBackAction);
+    }
+
+    componentWillUnmount() {
+        BackAndroid.removeEventListener('hardwareBackPress', this.buttonBackAction);
+    }
+
   //返回
   buttonBackAction(){
       const {navigator} = this.props;
@@ -140,7 +148,7 @@ class Login extends Component {
                           </TouchableOpacity>
                     </View>
                 </View>
-                <Text style={{marginTop:13,marginLeft:13,fontSize:12,color:'#777'}}>注册则视为您已同意《嘎嘎商城用户协议》</Text>
+                <Text style={{marginTop:13,marginLeft:13,fontSize:12,color:'#777'}}>注册则视为您已同意《现金口贷用户协议》</Text>
                 <TouchableOpacity onPress={() => {this.registerAction()}} 
                                   style={{justifyContent:'center',marginTop:13,alignItems:'center'}}>
                     <Image source={require('../../imgs/logre/ic_login_btn.png')} 

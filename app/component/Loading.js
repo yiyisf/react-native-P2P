@@ -184,4 +184,5 @@ const styles = StyleSheet.create({
     }
 });
 
-module.exports = Loading
+// module.exports = Loading;
+export default Loading;

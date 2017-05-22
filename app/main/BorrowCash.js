@@ -168,7 +168,9 @@ class BorrowCash extends Component {
                             <Text style={{fontSize:16,color:'white'}}>下一步</Text>
                         </View>
                     </View>
-                    <View style={{flex: 0.35, backgroundColor: 'grey'}}></View>
+                    <View style={{flex: 0.35, backgroundColor: 'grey'}}>
+
+                    </View>
                 </View>
             </View>
         );

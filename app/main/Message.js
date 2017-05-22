@@ -31,12 +31,10 @@ class Message extends Component {
         const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
             dataSource: ds,
-            // dataSource: ds.cloneWithRows(['row 1', 'row 2', 'row 3']),
         };
     }
 
     componentWillMount() {
-        console.log("componentWillMount");
         BackAndroid.addEventListener('hardwareBackPress', this.buttonBackAction);
         this.onScrollDown();
     }
@@ -143,7 +141,7 @@ class Message extends Component {
                     <TouchableOpacity onPress={() => {
                         this.buttonBackAction()
                     }}
-                                      style={{justifyContent: 'center', alignItems: 'center', height: 30, width: 30}}>
+                                      style={styles.headerTitle}>
                         <Image
                             style={{width: 13, height: 20}}
                             source={require('../imgs/ic_center_back.png')}
