@@ -8,15 +8,18 @@ import {
     TouchableOpacity,
     Dimensions,
     Navigator,
-    InteractionManager
-} from 'react-native'
+    InteractionManager,
+    Platform,
+    TouchableHighlight,
+} from 'react-native';
 import Message from './Message';
 import BorrowCash from "./BorrowCash";
+import styles from '../common/Style';
 
 
 export default class Find extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.borrowMoney = this.borrowMoney.bind(this);
         this.messageButtonAction = this.messageButtonAction.bind(this);
@@ -35,7 +38,7 @@ export default class Find extends Component {
     }
 
     //
-    messageButtonAction(){
+    messageButtonAction() {
         const {navigator} = this.props;
         InteractionManager.runAfterInteractions(() => {
             navigator.push({
@@ -49,16 +52,12 @@ export default class Find extends Component {
     render() {
         return (
             <View>
-                <View
-                    style={{
-                        height: 40, backgroundColor: '#389e7f', flexDirection: 'row', alignItems:'center'
-                    }}>
+                <View style={styles.header}>
                     <View style={{flex: 1}}/>
                     <View
                         style={{
                             flex: 1,
                             alignItems: 'center',
-                            justifyContent: 'center'
                         }}>
                         <Text
                             style={{
@@ -68,7 +67,7 @@ export default class Find extends Component {
                             }}>我要借钱</Text>
                     </View>
                     <View style={{flex: 1, justifyContent: 'flex-end', alignItems: 'center', flexDirection: 'row'}}>
-                        <TouchableOpacity onPress={() => {
+                        <TouchableHighlight onPress={() => {
                             this.messageButtonAction()
                         }}
                                           style={{marginRight: 20, justifyContent: 'center'}}>
@@ -76,7 +75,7 @@ export default class Find extends Component {
                                 style={{width: 24, height: 22}}
                                 source={require('../imgs/ic_notifications_none_white_24dp_2x.png')}
                             />
-                        </TouchableOpacity>
+                        </TouchableHighlight>
                     </View>
                 </View>
 
@@ -104,12 +103,3 @@ export default class Find extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "white",
-        height: Dimensions.get("window").height,
-        width: Dimensions.get("window").width,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-});

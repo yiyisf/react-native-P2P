@@ -8,13 +8,19 @@ import {
     StatusBar,
     BackAndroid,
     View,
-    Platform
+    Platform,
+    StatusBarIOS
 } from 'react-native';
 
 import Splash from './Ready';
 import AppMain from './AppMain';
-export const STATUS_BAR_HIDDEN = (Platform.OS === 'ios' ? true : false)
+export const STATUS_BAR_HIDDEN = (Platform.OS === 'ios');
 class rootApp extends React.Component {
+
+    state = {
+        translucent: false,
+    };
+
     constructor(props) {
         super(props);
         // BackAndroid.addEventListener('hardwareBackPress', this.goBack);
@@ -32,13 +38,13 @@ class rootApp extends React.Component {
     }
 
     render() {
+
+        StatusBarIOS
         return (
             <View style={{flex: 1}}>
                 <StatusBar
                     barStyle='light-content'
-                    hidden={STATUS_BAR_HIDDEN}
                     backgroundColor='#006f53'
-                    style={{height: 0}}
                 />
                 <Navigator
                     ref='navigator'

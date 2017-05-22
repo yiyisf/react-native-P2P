@@ -14,7 +14,7 @@ import {
 import {connect} from 'react-redux';
 import {NaviGoBack} from '../common/CommonUtils';
 import {messageFetch} from '../actions/messageAction';
-
+import styles from '../common/Style';
 const {height, width} = Dimensions.get('window');
 /**
  * 系统消息
@@ -139,7 +139,7 @@ class Message extends Component {
         console.log("Approve is :"+ Message.messageList);
         return (
             <View style={{flex:1}}>
-                <View style={{height: 40, backgroundColor: '#389e7f', flexDirection: 'row', alignItems: 'center'}}>
+                <View style={styles.header}>
                     <TouchableOpacity onPress={() => {
                         this.buttonBackAction()
                     }}
@@ -181,142 +181,6 @@ class Message extends Component {
         );
     }
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "white",
-        height: Dimensions.get("window").height,
-        width: Dimensions.get("window").width,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    item_view_zhanwei: {
-        backgroundColor: '#f5f5f5',
-        height: 8
-    },
-    item_view_top: {
-        flexDirection: 'row',
-        height: 35,
-        alignItems: 'center',
-        backgroundColor: '#9e9e9e',
-    },
-    item_view_icon: {
-        width: 10,
-        height: 15,
-        marginLeft: 5
-    },
-    item_view_center_status: {
-        alignItems: 'flex-end',
-        flex: 1,
-        marginRight: 10
-    },
-    item_view_center_status_tv_img: {
-        height: 20,
-        width: 62,
-        justifyContent: 'center',
-        alignItems: "center"
-    },
-    item_view_center_status_tv: {
-        color: 'white',
-        fontSize: 10,
-        backgroundColor: '#00000000'
-    },
-    item_view_center_msg: {
-        flexDirection: 'row',
-        height: 60,
-        marginBottom: 10,
-        alignItems: 'flex-end'
-    },
-    item_view_center_icon: {
-        width: 50,
-        height: 50,
-        marginLeft: 10
-    },
-    item_view_center_title_img: {
-        flex: 1,
-        marginLeft: 20,
-        marginTop: 5
-    },
-    item_view_center_info: {
-        marginRight: 20
-    },
-    item_view_center_info_top: {
-        fontSize: 20,
-        paddingBottom: 5,
-        color: '#000000',
-        textAlign: 'right'
-    },
-    item_view_center_title: {
-        fontSize: 33,
-        color: 'red'
-    },
-    item_view_center_time: {
-        color: '#777',
-        fontSize: 12
-    },
-    item_view_bottom: {
-        flexDirection: 'row',
-        height: 40,
-        alignItems: 'center'
-    },
-    item_view_bottom_price_v: {
-        flex: 1.5,
-        marginLeft: 20,
-        justifyContent: 'center',
-        // alignItems: 'flex-start'
-    },
-    item_view_bottom_price: {
-        color: '#aaa',
-        fontSize: 14
-    },
-    item_view_bottom_again_v: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    item_view_bottom_btn: {
-        width: 120,
-        height: 30,
-        justifyContent: 'center',
-        backgroundColor: '#389e7f',
-        borderRadius: 4
-    },
-    item_view_bottom_btn_prepare: {
-        width: 120,
-        height: 30,
-        justifyContent: 'center',
-        backgroundColor: '#ff8848',
-        borderRadius: 4
-    },
-    item_view_bottom_btn_stop: {
-        width: 120,
-        height: 30,
-        justifyContent: 'center',
-        backgroundColor: '#dddddd',
-        borderRadius: 4
-    },
-    item_view_bottom_again: {
-        fontSize: 14,
-        textAlign: 'center',
-        color: '#ffffff'
-    },
-    card_style: {
-        borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#ddd',
-        borderBottomWidth: 0,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 1,
-        marginLeft: 20,
-        marginRight: 20,
-        marginTop: 10,
-        backgroundColor:'white',
-    }
-});
 
 export default connect((state) => {
     const {Message} = state;

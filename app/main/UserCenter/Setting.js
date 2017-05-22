@@ -18,6 +18,7 @@ import FeedBack from './FeedBack';
 import About from './About';
 import ResetPwd from  './ResetPwd';
 import Prepaid from './Prepaid';
+import styles from '../../common/Style';
 
 class Setting extends Component {
   constructor(props) {
@@ -87,7 +88,7 @@ class Setting extends Component {
   render() {
         return (
              <View style={{backgroundColor:'#f5f5f5',flex:1}}>
-                <View style={{height: 40, backgroundColor: '#389e7f',flexDirection:'row',paddingTop:10}}>
+                <View style={styles.header}>
                     <TouchableOpacity onPress={() => {this.buttonBackAction()}} 
                                      style={{justifyContent:'center',alignItems:'center',height:30,width:30}}>
                        <Image 
@@ -129,11 +130,5 @@ class Setting extends Component {
     }
 }
 
-const styles=StyleSheet.create({
-    item_layout:{
-        backgroundColor:'white',
-        height:48,
-        justifyContent:'center'
-    }
-});
+
 export default Setting;

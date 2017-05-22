@@ -22,6 +22,7 @@ import ModifyInformation from './UserCenter/ModifyInformation';
 import Charge from './UserCenter/Charge';
 import Prepaid from './UserCenter/Prepaid';
 import Withdraw from './UserCenter/Withdraw';
+import styles from '../common/Style';
 
 var {height, width} =  Dimensions.get('window');
 
@@ -109,7 +110,7 @@ class User extends Component {
         return (
             <View style={{flex: 1, backgroundColor: '#f5f5f5'}}>
 
-                <View style={{height: 40, backgroundColor: '#389e7f', flexDirection: 'row', alignItems:'center'}}>
+                <View style={styles.header}>
                     <View style={{flex: 1}}></View>
                     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                         <Text style={{fontSize: 18, color: 'white', alignSelf: 'center'}}>我的</Text>
@@ -214,20 +215,5 @@ class User extends Component {
         );
     }
 }
-const styles = StyleSheet.create({
-    top_line: {
-        height: 1,
-        backgroundColor: '#ccc'
-    },
-    approve_line: {
-        marginLeft: 8,
-        marginRight: 8,
-    },
-    modify_item: {
-        alignItems: 'flex-end',
-        flex: 1,
-        marginRight: 10,
-        marginTop: 15
-    }
-});
+
 export default User;

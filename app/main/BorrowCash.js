@@ -21,6 +21,8 @@ import {NaviGoBack} from '../common/CommonUtils';
 import {messageFetch} from '../actions/messageAction';
 import Message from "./Message";
 
+import styles from '../common/Style';
+
 const {height, width} = Dimensions.get('window');
 class BorrowCash extends Component {
 
@@ -77,7 +79,7 @@ class BorrowCash extends Component {
         // console.log("Approve is :"+ BorrowCash.messageList);
         return (
             <View style={{flex: 1}}>
-                <View style={{height: 40, backgroundColor: '#389e7f', flexDirection: 'row', alignItems: 'center'}}>
+                <View style={styles.header}>
                     <TouchableOpacity onPress={() => {
                         this.buttonBackAction()
                     }}
@@ -172,48 +174,6 @@ class BorrowCash extends Component {
         );
     }
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "white",
-        height: Dimensions.get("window").height,
-        width: Dimensions.get("window").width,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    circle: {
-        height: 20,
-        width: 20,
-        borderRadius: 100,
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    button: {
-        borderRadius: 2,
-        backgroundColor: '#389e7f',
-        width: 90,
-        height: 23,
-        alignItems: 'center',
-        justifyContent:'center'
-    },
-    card_style: {
-        borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#ddd',
-        borderBottomWidth: 0,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 1,
-        marginLeft: 20,
-        marginRight: 20,
-        marginTop: 10,
-        backgroundColor: 'white',
-    }
-});
 
 export default connect((state) => {
     const {BorrowCash} = state;
